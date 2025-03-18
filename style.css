@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.avoidance-container,
+.qr-code-container,
+.history-container {
+  text-align: center;
+  width: 33.33%;
+  height: 100vh;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.avoidance-container {
+  border-left: 1px solid #ccc;
+  justify-content: center;
+}
+
+.qr-code-container {
+  justify-content: center;
+}
+
+#antenna-select {
+  width: 80%;
+  padding: 0.625rem;
+  font-size: 16px;
+  margin-bottom: 0.625rem;
+}
+
+.avoidance-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.avoidance-buttons button,
+.button {
+  margin: 0.3125rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.avoidance-buttons button.selected {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+#qrcode {
+  margin-bottom: 0.625rem;
+  width: 80%;
+  height: auto;
+  max-width: 16rem;
+}
+
+.history-title {
+  position: static;
+  background-color: transparent;
+  padding-bottom: 0;
+  margin-top: 30%;
+  text-align: left;
+  padding-left: 2%;
+}
+
+.history-list-wrapper {
+  overflow-y: auto;
+  max-height: 70%;
+  width: 100%;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+#history-list li {
+  cursor: pointer;
+  padding: 0.625rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+#history-list li:hover {
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 48rem) {
+  .container {
+    flex-direction: column;
+  }
+
+  .avoidance-container,
+  .qr-code-container,
+  .history-container {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .avoidance-container {
+    border-left: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .avoidance-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .avoidance-buttons button {
+    margin: 0.3125rem;
+  }
+
+  .history-title {
+    margin-top: 5%;
+  }
+}
+
+#status-table {
+  width: 80%;
+  margin: 1.25rem auto;
+  border-collapse: collapse;
+}
+
+#status-table th,
+#status-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#status-table th {
+  background-color: #f0f0f0;
+}

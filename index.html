@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QRコード生成ツール</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="avoidance-container">
+            <h2>アンテナ選択</h2>
+            <select id="antenna-select">
+                <option value="アンテナ無し">アンテナ無し</option>
+                <option value="足元ガード">足元ガード</option>
+                <option value="単体回復">単体回復</option>
+                <option value="全体回復">全体回復</option>
+                <option value="単体復活">単体復活</option>
+                <option value="全体復活">全体復活</option>
+                <option value="解毒">解毒</option>
+                <option value="痺れとる">痺れとる</option>
+                <option value="目覚める">目覚める</option>
+                <option value="属性治す">属性治す</option>
+                <option value="全て治す">全て治す</option>
+                <option value="無敵">無敵</option>
+                <option value="興奮">興奮</option>
+                <option value="蓄える">蓄える</option>
+                <option value="単体増強系">単体増強系</option>
+                <option value="単体増強系(かわしやすい系)">単体増強系(かわしやすい系)</option>
+                <option value="全体増強系">全体増強系</option>
+                <option value="弱体系">弱体系</option>
+                <option value="弱体系(みんなかわしやすい)">弱体系(みんなかわしやすい)</option>
+                <option value="単体攻撃(火,水)">単体攻撃(火,水)</option>
+                <option value="単体攻撃(風,光)">単体攻撃(風,光)</option>
+                <option value="単体攻撃(土,雷,氷,闇)">単体攻撃(土,雷,氷,闇)</option>
+                <option value="3体攻撃(火,水)">3体攻撃(火,水)</option>
+                <option value="3体攻撃(風,光)">3体攻撃(風,光)</option>
+                <option value="3体攻撃(土,雷,氷,闇)">3体攻撃(土,雷,氷,闇)</option>
+                <option value="全体攻撃(火,水)">全体攻撃(火,水)</option>
+                <option value="全体攻撃(風,光)">全体攻撃(風,光)</option>
+                <option value="全体攻撃(土,雷,氷,闇)">全体攻撃(土,雷,氷,闇)</option>
+                <option value="ノックダウン">ノックダウン</option>
+            </select>
+            <h2>回避率(補正後)</h2>
+            <div class="avoidance-buttons">
+                <button data-value="0">0</button>
+                <button data-value="3+">3+</button>
+                <button data-value="3-">3-</button>
+            </div>
+            <div id="status-table-container"></div>
+            <p>
+                回避率6以降は適応していません。
+                <br>
+                主人公補正はありません。
+            </p>
+        </div>
+        <div class="qr-code-container">
+            <h2>QRコード</h2>
+            <div id="qrcode"></div>
+            <button id="generate-button" class="button">生成</button>
+            <button id="save-button" class="button">保存</button>
+        </div>
+        <div class="history-container">
+            <h2 class="history-title">履歴</h2>
+            <div class="history-list-wrapper">
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
