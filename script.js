@@ -288,9 +288,9 @@ function displayStatusTable() {
             <tr>
                 <th></th>
                 <th>最大</th>
-                <th>準最大</th>
+                <th>準大</th>
                 <th>中間</th>
-                <th>準最速</th>
+                <th>準速</th>
                 <th>最速</th>
             </tr>
             <tr>
