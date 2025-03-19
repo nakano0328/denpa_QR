@@ -235,7 +235,7 @@ function updateAvoidanceButtonLabels() {
     });
 }
 
-// ランダムな20桁の文字列を生成
+// ランダムな126桁の文字列を生成
 function generateRandomString(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
@@ -248,7 +248,7 @@ function generateRandomString(length) {
 // QRコードを生成・表示
 function generateQRCode() {
     try {
-        const text = generateRandomString(20);
+        const text = generateRandomString(126); // 126桁に変更
         qrcode.clear();
         qrcode.makeCode(text);
         addToHistory(text);
