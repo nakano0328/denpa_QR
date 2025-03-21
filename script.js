@@ -9,6 +9,7 @@ const statusTableContainer = document.getElementById('status-table-container');
 let qrcode;
 const history = [];
 let avoidanceBonus = 0;
+let qrCodeCounter = 1; // QRコードのカウンター追加
 
 // ステータスデータ
 const statusData = {
@@ -259,9 +260,12 @@ function generateQRCode() {
 
 // 履歴に追加
 function addToHistory(text) {
-    history.unshift(text);
+    const qrCodeName = `QRコードNo.${qrCodeCounter}`;
+    qrCodeCounter++;
+    
+    history.unshift({ name: qrCodeName, code: text });
     const li = document.createElement('li');
-    li.textContent = text;
+    li.textContent = qrCodeName;
     li.addEventListener('click', () => {
         qrcode.clear();
         qrcode.makeCode(text);
