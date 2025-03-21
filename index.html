@@ -2,9 +2,11 @@
 <html>
 
 <head>
+    <meta charset="UTF-8"> <!-- 追加 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 追加 -->
     <title>QRコード生成ツール</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js" defer></script> <!-- deferを追加 -->
 </head>
 
 <body>
@@ -68,8 +70,8 @@
             </div>
         </div>
     </div>
-    <script src="qrcode.min.js"></script>
-    <script src="script.js"></script>
+    <script src="qrcode.min.js" defer></script> <!-- deferを追加 -->
+    <script src="script.js" defer></script> <!-- deferを追加 -->
 </body>
 
 </html>
